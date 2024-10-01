@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desain Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!--Navbar-->
+<nav class="navbar">
+    <div class="nav-left">
+        <span class="nav-item">Portfolio</span>
+    </div>
+    <div class="nav-right">
+        <span class="nav-item" id="biodataBtn">Info Biodata</span>
+        <span class="nav-item" id="skillsBtn">Pengalaman & Kemampuan</span>
+    </div>
+</nav>
+
+<div class="main-content">
+    <img src="Image/Utama.png" alt="Your Image" class="main-imagee">
+    <div class="info-box">
+        <h2>Tentang Saya</h2>
+        <p>Perkenalkan, saya Muhammad Al Adib, seorang lulusan Sarjana Komputer dari Universitas Harapan yang telah berkarir sebagai freelancer dalam bidang kreatif selama beberapa tahun. Dengan fokus utama pada proyek Augmented Reality dan 3D modeling, saya juga memiliki pengalaman di desain grafis, photo modeling, videografi, dan editing video. Selain itu, saya pernah membuat website untuk proyek Kuliah Kerja Nyata (KKN) yang memperkenalkan informasi kepada masyarakat. Saya selalu bersemangat untuk mengeksplorasi teknologi baru dan menciptakan solusi inovatif dalam setiap proyek yang saya tangani.</p>
+    </div>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+<!-- Pop-up Card for Biodata -->
+<div id="biodataCard" class="popup-card">
+    <div class="card-content">
+        <img src="Image/Photo.jpg" alt="Photo" class="profile-photo">
+        <div class="info-text">
+            <h3>Info Biodata</h3>
+<div class="info-row">
+    <span class="info-label">Nama :</span>
+    <span>Muhammad Al Adib</span>
+</div>
+<div class="info-row">
+    <span class="info-label">TTL  :</span>
+    <span>Medan, 07 Desember 2001</span>
+</div>
+<p></p>
+
+<h4>Pendidikan</h4>
+
+    <li>
+        <strong>Sekolah :</strong> SMK Tritech Informatika ( Multimedia )  <br>
+        
+        
+    </li>
+    <li>
+        <strong>Universitas :</strong> Universitas Harapan Medan (Teknik Informasi)
+    </li>
+
+
+        </div>
+    </div>
+    <button class="close-btn" onclick="closeCard('biodataCard')">Tutup</button>
+</div>
+
+<!-- Pop-up Card for Skills -->
+<div id="skillsCard" class="popup-card">
+    <div class="card-content">
+        <h3 style="text-align: left;">Pengalaman Kerja & Skills</h3>
+        <p style="text-align: left;">Ini adalah daftar pengalaman kerja dan skills yang saya kuasai.</p>
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h3>#### Pengalaman Magang ###</h3>
+                <p></p>
+                <div><span><b>Magang di Raja Photo Studio Medan (2018)</b></span></div>
+                <div>Asisten Photographer & Editor Photo</div>
+                <p></p>
+            </div>
+        </div>
+        
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <div><span><b>Magang di Reverse Coffe Shop (2021)</b></span></div>
+                <div>Website Developer & Creator Instagram</div>
+                <p></p>
+            </div>
+        </div>
+        
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <div><span><b>Magang di Telkom Akses Sumatra Utara (2022)</b></span></div>
+                <div>Asisten Teknisi FTM (Fiber Termination Management)</div>
+                <p></p>
+            </div>
+        </div>
+        
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <div><span><b>Freelancer (2022 - 2024)</b></span></div>
+                <div>3D Modeler, Augmented Reality Developer, Graphic Design & Video Editor</div>
+                <p></p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h3>#### Event ####</h3>
+                <p></p>
+                <div><span><b>Alibaba Polardb (2023)</b></span></div>
+                <div>Berpartisipasi sebagai video kreator di dalam tim</div>
+                <p></p>
+            </div>
+        </div>
+        
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <div><span><b>Recloud Alibaba Cloud x Codepolitan (2021)</b></span></div>
+                <div>Berpartisipasi sebagai video kreator di dalam tim</div>
+                <p></p>
+            </div>
+        </div>        
+    </div>
+    <div class="skills">
+        <h3>Keterampilan Saya</h3>
+        <div class="skills-container">
+            <div class="skill-item">
+                <img src="Image/icon1.png" alt="Skill 1" />
+                
+            </div>
+            <div class="skill-item">
+                <img src="Image/icon2.png" alt="Skill 2" />
+                
+            </div>
+            <div class="skill-item">
+                <img src="Image/icon3.png" alt="Skill 3" />
+                
+            </div>
+            <div class="skill-item">
+                <img src="Image/icon4.png" alt="Skill 4" />
+                
+            </div>
+            <div class="skill-item">
+                <img src="Image/icon5.png" alt="Skill 5" />
+                
+            </div>
+            <div class="skill-item">
+                <img src="Image/icon6.png" alt="Skill 6" />
+                
+            </div>
+        </div>
+    </div>
+    
+    <button class="close-btn" onclick="closeCard('skillsCard')">Tutup</button>
+</div>
+
+<script>
+    document.getElementById('biodataBtn').addEventListener('click', function() {
+        showCard('biodataCard');
+    });
+
+    document.getElementById('skillsBtn').addEventListener('click', function() {
+        showCard('skillsCard');
+    });
+
+    function showCard(cardId) {
+        const card = document.getElementById(cardId);
+        const overlay = document.getElementById('overlay');
+        overlay.style.display = 'block';
+        document.body.style.pointerEvents = 'none'; // Nonaktifkan semua klik
+        setTimeout(() => {
+            card.style.display = 'block';
+            card.classList.add('fade-in');
+            document.body.style.pointerEvents = 'auto'; // Aktifkan kembali klik setelah animasi
+        }, 50);
+    }
+
+    function closeCard(cardId) {
+        const card = document.getElementById(cardId);
+        card.classList.remove('fade-in');
+        document.body.style.pointerEvents = 'none'; // Nonaktifkan semua klik saat menutup
+        setTimeout(() => {
+            card.style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+            document.body.style.pointerEvents = 'auto'; // Aktifkan kembali klik setelah kartu ditutup
+        }, 300);
+    }
+</script>
+    <!-- Bagian Atas: Deskripsi dan Gambar 16:9 -->
+    <div class="design-container">
+        <div class="design-content">
+            <div class="design-text">
+                <h2>Design</h2>
+                <p>Berikut ini merupakan salah satu contoh desain yang pernah saya buat, baik untuk media sosial maupun antarmuka pengguna aplikasi. Saya menyukai desain karena memungkinkan saya mengekspresikan kreativitas dan menggabungkan estetika visual dengan fungsi. Proses ini juga memberikan kepuasan saat ide-ide saya diterima dengan baik oleh pengguna. Desain memungkinkan saya berkomunikasi secara efektif dan memahami kebutuhan audiens, menjadikannya pengalaman yang selalu menarik dan bermanfaat.</p>
+            </div>
+            <div class="design-main-image">
+                <img src="Image/Mainindex.png" alt="Main Design Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Gambar-Gambar Kecil 1:1 -->
+    <div class="design-container">
+        <div class="design-gallery-1x1">
+            <img src="Image/index 1.jpg" alt="Design 1">
+            <img src="Image/index 2.jpg" alt="Design 2">
+            <img src="Image/index 3.jpg" alt="Design 3">
+            <img src="Image/index 4.jpg" alt="Design 4">
+            <img src="Image/index 5.jpg" alt="Design 5">
+        </div>
+    </div>
+
+    <!-- Modal untuk Gambar 1:1 -->
+    <div id="small-image-modal" class="design-modal">
+    <div class="small-image-modal-content">
+        <img id="small-image" src="" alt="Gambar" style="width: 100%; height: auto;">
+        <button class="small-image-close" style="background-color: red; color: white;">Close</button>
+    </div>
+</div>
+
+    <!-- Tombol untuk Memunculkan Pop-up Gambar 9:16 Tambahan -->
+    <div class="design-container">
+        <button id="show-more-btn">Lihat Design Lainnya</button>
+    </div>
+    
+    <!-- Modal Pop-up untuk Galeri Gambar 9:16 -->
+    <div id="design-modal" class="design-modal">
+        <div class="design-modal-content">
+            
+            <div class="design-gallery">
+                <img src="Image/1.jpg" alt="Design 1">
+                <img src="Image/2.png" alt="Design 2">
+                <img src="Image/3.png" alt="Design 3">
+                <img src="Image/4.png" alt="Design 4">
+                <img src="Image/5.jpg" alt="Design 5">
+                <img src="Image/6.jpg" alt="Design 6">
+                <img src="Image/7.jpg" alt="Design 7">
+                <img src="Image/8.jpg" alt="Design 8">
+                <img src="Image/9.jpg" alt="Design 9">
+                <img src="Image/10.jpg" alt="Design 10">
+                <img src="Image/11.jpg" alt="Design 11">
+                <img src="Image/12.jpg" alt="Design 12">
+                <img src="Image/13.jpg" alt="Design 13">
+                <img src="Image/14.jpg" alt="Design 14">
+                <img src="Image/15.jpg" alt="Design 15">
+            </div>
+             <!-- Tombol Close di bagian bawah -->
+             <span class="design-close">Close</span>
+        </div>
+    </div>
+    
+
+    <!-- Bagian Augmented Reality -->
+    <div class="container">
+        <div class="phone-image">
+            <img src="Image/Test.gif" alt="Phone Image">
+        </div>
+        <div class="content">
+            <h2>Augmented Reality</h2>
+            <p>Berikut ini merupakan salah satu contoh proyek augmented reality yang pernah saya kerjakan. Saya tertarik dengan augmented reality karena teknologi ini memungkinkan penggabungan dunia nyata dan elemen digital, menciptakan pengalaman interaktif yang menarik. Proses ini memberi saya tantangan yang memuaskan dan kesempatan untuk terus belajar dalam bidang yang terus berkembang ini.</p>
+            <p>Untuk menggunakan augmented reality ini, kamu bisa mendownload aplikasinya di bawah sesuai dengan judul yang diinginkan. Pastikan ponselmu mendukung untuk menjalankan aplikasi tersebut. Untuk cara penggunaan lebih lanjut, kamu bisa klik link unduh aplikasi di bawah ini.</p>
+            <div class="cards">
+                <div class="card">
+                    <img src="Image/i1.png" alt="Icon 1">
+                    <a href="https://drive.google.com/drive/folders/1p0RQsDyT1Thyw8iUBBfk6_xbOrwDvJYi?usp=drive_link" target="_blank"><button>Unduh</button></a>
+                </div>
+                <div class="card">
+                    <img src="Image/i2.png" alt="Icon 2">
+                    <a href="https://drive.google.com/drive/folders/1jbLtBNdEs-oTY2wiZCXJYZ-0nkXdn0MG?usp=drive_link" target="_blank"><button>Unduh</button></a>
+                </div>
+                <div class="card">
+                    <img src="Image/i3.png" alt="Icon 3">
+                    <a href="https://drive.google.com/drive/folders/1Ujwy8WHwrzxXQOoTCEJcuuyQwOScKZbt?usp=drive_link" target="_blank"><button>Unduh</button></a>
+                </div>
+                <div class="card">
+                    <img src="Image/i4.png" alt="Icon 4">
+                    <a href="https://drive.google.com/drive/folders/14XOxNYCzpFOs6hd3P1_E-EgimdliqAVT?usp=drive_link" target="_blank"><button>Unduh</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bagian 3D Modeling -->
+    <h1 class="title">3D Modeling</h1>
+    <div class="gallery-container">
+        
+        <div class="gallery">
+            <div class="gallery-item" data-image="index.jpg">
+                <img src="Image/D1.png" alt="3D Model 1">
+            </div>
+            <div class="gallery-item" data-image="index.jpg">
+                <img src="Image/D2.png" alt="3D Model 1">
+            </div>
+            <div class="gallery-item" data-image="index.jpg">
+                <img src="Image/D3.png" alt="3D Model 1">
+            </div>
+            <div class="gallery-item" data-image="index.jpg">
+                <img src="Image/D4.png" alt="3D Model 4">
+            </div>
+            <div class="gallery-item" data-image="index.jpg">
+                <img src="Image/D5.png" alt="3D Model 5">
+            </div>
+            <div class="gallery-item" data-image="index.jpg">
+                <img src="Image/D6.png" alt="3D Model 6">
+            </div>
+            <div class="gallery-item" data-image="index.jpg">
+                <img src="Image/D7.png" alt="3D Model 7">
+            </div>
+            <div class="gallery-item" data-image="index.jpg">
+                <img src="Image/D8.png" alt="3D Model 8">
+            </div>
+            <div class="gallery-item" data-image="index.jpg">
+                <img src="Image/D9.png" alt="3D Model 9">
+            </div>
+            <div class="gallery-item" data-image="index.jpg">
+                <img src="Image/D10.png" alt="3D Model 10">
+            </div>
+            <div class="gallery-item" data-image="index.jpg">
+                <img src="Image/D11.png" alt="3D Model 11">
+            </div>
+            <div class="gallery-item" data-image="index.jpg">
+                <img src="Image/D12.png" alt="3D Model 12">
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Modal untuk Gambar 3D -->
+    <div id="model-image-modal" class="popup hidden">
+        <div class="popup-content">
+            <img id="model-image" src="" alt="3D Model Image" />
+            <div class="button-container">
+                <button id="close-model-popup" class="small-image-close">Close</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Button to trigger the pop-up -->
+    <button id="popup-trigger" class="3dmodel-button">Informasi</button>
+
+<!-- Modal pop-up untuk informasi -->
+<div id="info-popup" class="popup hidden">
+  <div class="popup-content">
+    <p>Saya pernah merancang proyek 3D menggunakan Blender, khususnya dalam pembuatan model isometrik. Dalam proyek ini, saya fokus pada menciptakan objek dengan perspektif isometrik yang memberikan tampilan unik dan menarik. Prosesnya melibatkan pengaturan detail geometris, penerapan tekstur, dan pencahayaan yang tepat untuk menghasilkan visual yang estetis dan informatif. Model isometrik yang saya buat sering digunakan untuk aplikasi seperti game, ilustrasi, dan desain konsep.</p>
+    <button id="info-popup-close">Tutup</button>
+  </div>
+</div>
+
+<!-- Modal untuk gambar kecil -->
+<div id="small-image-modal" class="modal hidden">
+  <span class="small-image-close">&times;</span>
+  <img id="small-image" class="modal-content">
+</div>
+
+<!-- Modal untuk model 3D -->
+<div id="model-image-modal" class="modal hidden">
+  <img id="model-image" class="modal-content">
+  <button id="close-model-popup">Tutup</button>
+</div>
+
+<div class="website">
+    <div class="website-left">
+        <img src="Image/Mutama.jpg" alt="Large Image" class="large-image">
+        <div class="small-images">
+            <img src="Image/m1.jpg" alt="Small Image 1">
+            <img src="Image/Mutama.jpg" alt="Small Image 2">
+            <img src="Image/m2.jpg" alt="Small Image 3">
+        </div>
+    </div>
+    <div class="website-right">
+        <h2>Website</h2>
+        <p>Saya pernah KKN di Reverse Coffee Shop di Medan, di mana saya ikut andil dalam merancang website untuk coffee shop tersebut. Dalam proyek ini, saya terlibat dalam pengembangan aspek frontend dan backend, merancang antarmuka pengguna yang menarik serta mengelola sistem database untuk memastikan informasi selalu terkini.</p>
+        <p>Jika Anda ingin mengakses website coffee shop tersebut, Anda bisa mengklik tombol "Kunjungi Website" di bawah ini. </p>
+        <a href="https://dibsowden.github.io/Porto.Web.KKN/" target="_blank">
+            <button>Lihat Website</button>
+        </a>
+    </div>
+</div>   
+
+   <!--Photography-->
+   <div class="photo-gallery">
+    <div class="thumbnail-section">
+        <div class="thumbnail-row">
+            <img src="Image/P8.jpg" alt="Thumbnail 1" class="thumbnail-image" onclick="openPopup(this.src)">
+            <img src="Image/P1.jpg" alt="Thumbnail 2" class="thumbnail-image" onclick="openPopup(this.src)">
+            <img src="Image/P5.jpg" alt="Thumbnail 3" class="thumbnail-image" onclick="openPopup(this.src)">
+            <img src="Image/P2.jpg" alt="Thumbnail 4" class="thumbnail-image" onclick="openPopup(this.src)">
+        </div>
+        <div class="thumbnail-row">
+            <img src="Image/P6.jpg" alt="Thumbnail 5" class="thumbnail-image" onclick="openPopup(this.src)">
+            <img src="Image/P7.jpg" alt="Thumbnail 6" class="thumbnail-image" onclick="openPopup(this.src)">
+            <img src="Image/P3.jpg" alt="Thumbnail 7" class="thumbnail-image" onclick="openPopup(this.src)">
+            <img src="Image/P4.jpg" alt="Thumbnail 8" class="thumbnail-image" onclick="openPopup(this.src)">
+        </div>
+    </div>
+    <div class="main-section">
+        <img src="Image/P9.jpg" alt="Main Image" class="featured-image" onclick="openPopup(this.src)">
+        <h1 class="title-text">Fotografi</h1>
+        <p class="description-text">Pada saat SMK, saya mengambil jurusan multimedia yang memberikan saya pemahaman mendalam tentang fotografi dan cara menggunakan kamera. Selama masa tersebut, saya mendapatkan kesempatan magang di Raja Photo Studio, di mana saya menjalani dua peran penting: sebagai asisten fotografer dan editor foto. Sebagai asisten, saya belajar langsung dari fotografer berpengalaman, membantu dalam pengaturan sesi pemotretan dan pengambilan gambar. Selain itu, saya juga bertanggung jawab untuk mengedit foto-foto yang diambil, memastikan hasil akhir layak untuk disajikan kepada konsumen dengan kualitas yang memuaskan. Pengalaman ini memperkaya keterampilan saya dalam dunia fotografi dan editing.</p>
+        <p class="description-text">Dari pengalaman tersebut, saya merasa lebih percaya diri untuk mengambil job desk sebagai freelancer di bidang fotografi. Berikut adalah beberapa hasil foto model yang pernah saya lakukan, yang mencerminkan kreativitas dan teknik yang saya pelajari selama magang dan melalui pengalaman saya di industri fotografi.</p>
+    </div>
+</div>
+
+<!-- Pop-Up for Images -->
+<div id="image-popup" class="image-popup" onclick="closePopup()">
+    <span class="close-button" onclick="closePopup()">✖</span>
+    <img id="popup-image" class="popup-image" src="" alt="Popup Image">
+</div>
+
+<script>
+    function openPopup(imageSrc) {
+        document.getElementById("popup-image").src = imageSrc;
+        document.getElementById("image-popup").style.display = "flex";
+    }
+
+    function closePopup() {
+        document.getElementById("image-popup").style.display = "none";
+    }
+</script>
+
+<!--Video-->
+
+<div class="video-slider">
+    <button class="prev">&#10094;</button>
+
+    <div class="video-content">
+        <div class="video-description">
+            <h1>Videografi</h4>
+            <p>Beberapa waktu lalu, saya diberi kesempatan dan kepercayaan untuk mengerjakan proyek video company profile dari PT Elnusa Petrofin. Dalam proyek ini, saya berperan aktif dalam pengambilan video dan editing. Tidak hanya itu, beberapa tahun sebelumnya, saya turut serta dalam lomba pemrograman bersama tim dalam event Recloud Challenge yang diselenggarakan oleh Alibaba Cloud. Dalam proyek ini, saya berperan sebagai penulis skrip, pengambil video, dan editor video untuk pengenalan produk. Selain itu, saya juga terlibat dalam beberapa proyek videografi lainnya, termasuk video event challenge dari Hackathon sebagai editor, serta beberapa video klip band saya sendiri, di mana saya juga berperan sebagai editor.</p>
+        </div>
+
+        <div class="video-container">
+            <div class="video-slide">
+                <video width="360" height="202" controls> <!-- Ukuran lebih kecil -->
+                    <source src="Image/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-slide">
+                <video width="360" height="202" controls>
+                    <source src="Image/video2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-slide">
+                <video width="360" height="202" controls>
+                    <source src="Image/video3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-slide">
+                <video width="360" height="202" controls>
+                    <source src="Image/video4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-slide">
+                <video width="360" height="202" controls>
+                    <source src="Image/video5.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <button class="next">&#10095;</button>
+</div>
+
+
+
+<script>
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    const videoContainer = document.querySelector('.video-container');
+    const videoSlides = document.querySelectorAll('.video-slide');
+    const videoWidth = videoSlides[0].clientWidth + 20; // Ukuran video + jarak antar video
+
+    nextBtn.addEventListener('click', () => {
+        videoContainer.scrollBy({
+            top: 0,
+            left: videoWidth,
+            behavior: 'smooth'
+        });
+    });
+
+    prevBtn.addEventListener('click', () => {
+        videoContainer.scrollBy({
+            top: 0,
+            left: -videoWidth,
+            behavior: 'smooth'
+        });
+    });
+
+    // Ambil thumbnail dari video
+    const videos = document.querySelectorAll('.video-slide video');
+    videos.forEach(video => {
+        const thumbnail = video.nextElementSibling;
+        video.currentTime = 3; // Ambil thumbnail pada detik ke-5
+        video.addEventListener('loadeddata', () => {
+            const canvas = document.createElement('canvas');
+            const context = canvas.getContext('2d');
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            context.drawImage(video, 0, 0);
+            thumbnail.src = canvas.toDataURL();
+            thumbnail.style.display = 'block';
+        });
+    });
+</script>
+
+<!-- Modal Pop-up -->
+<div id="videoModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <video id="modalVideo" controls>
+        <source id="videoSource" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+    <script src="script.js"></script>
+    <footer class="footer">
+        <p>©2022 | Designed by Dibsowden</p>
+    </footer>
+
+    <style>
+        .footer {
+            background-color: #333; /* Warna latar belakang gelap */
+            color: white; /* Warna teks putih */
+            text-align: center; /* Teks rata tengah */
+            padding: 20px 0; /* Ruang atas dan bawah */
+            position: relative; /* Posisi relatif */
+            bottom: 0; /* Posisikan di bawah */
+            width: 100%; /* Lebar penuh */
+        }
+    </style>
+</body>
+</html>
